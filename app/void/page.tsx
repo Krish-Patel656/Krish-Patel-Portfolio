@@ -54,13 +54,13 @@ export default function VoidArchive() {
             </button>
           )}
           <Link
-            href="/traditional#from-void"
+            href="/#from-void"
             className="rounded-full border border-white/15 bg-black/60 px-4 py-2 font-display text-[9px] tracking-[0.18em] text-white backdrop-blur"
           >
             CLASSIC
           </Link>
           <Link
-            href="/"
+            href="/galaxy#from-void"
             className="rounded-full border border-violet-300/30 bg-violet-400/10 px-4 py-2 font-display text-[9px] tracking-[0.18em] text-violet-100 backdrop-blur"
           >
             RELAUNCH

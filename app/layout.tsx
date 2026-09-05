@@ -15,9 +15,9 @@ const exo = Exo_2({
 })
 
 export const metadata: Metadata = {
-  title: "Krish Patel · Nebula Explorer",
+  title: "Krish Patel · AI & Software Engineer",
   description:
-    "Interactive galaxy portfolio for Krish Patel — CS @ UTD, AI systems intern at EchoStar, Eyes Now, and Nebula Labs.",
+    "Krish Patel's portfolio — AI systems, software engineering, computer vision, automation, and interactive projects.",
 }
 
 export const viewport: Viewport = {

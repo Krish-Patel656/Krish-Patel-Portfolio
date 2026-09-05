@@ -111,7 +111,7 @@ export default function HUD({
             {archiveOpen ? "CLOSE LOGS" : "MISSION LOGS"}
           </button>
           <Link
-            href="/traditional#from-galaxy"
+            href="/#from-galaxy"
             className="border border-emerald-400/30 bg-black/40 px-3 py-1.5 font-display text-[10px] tracking-[0.22em] text-emerald-200 hover:bg-emerald-400/10"
           >
             CLASSIC VIEW

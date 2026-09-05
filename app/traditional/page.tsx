@@ -65,7 +65,7 @@ export default function TraditionalPortfolio() {
       <div className="traditional-scroll-progress" />
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#06060a]/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <Link href="/traditional" className="font-display text-sm tracking-[0.18em] text-white">
+          <Link href="/" className="font-display text-sm tracking-[0.18em] text-white">
             KRISH<span className="text-cyan-300">.</span>PATEL
           </Link>
           <div className="flex items-center gap-2">
@@ -84,7 +84,7 @@ export default function TraditionalPortfolio() {
               Projects
             </a>
             <Link
-              href="/"
+              href="/galaxy#from-classic"
               className="rounded-full border border-cyan-300/35 bg-cyan-300/5 px-4 py-2 font-display text-[10px] tracking-[0.16em] text-cyan-200 transition hover:bg-cyan-300/15"
             >
               ENTER GALAXY
@@ -131,34 +131,45 @@ export default function TraditionalPortfolio() {
           </div>
         </motion.div>
 
-        <motion.div
+        <motion.aside
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="traditional-parallax-fast relative mx-auto aspect-square w-full max-w-[420px]"
+          className="traditional-parallax-fast relative mx-auto w-full max-w-[440px] overflow-hidden rounded-[2rem] border border-white/10 bg-[#0a0b10]/90 p-7 shadow-2xl"
         >
-          <div className="absolute inset-[6%] z-0 rounded-full border border-cyan-300/20" />
-          <div className="absolute inset-[17%] z-0 animate-[spin_18s_linear_infinite] rounded-full border border-dashed border-violet-300/30" />
-          <div className="absolute inset-[29%] z-10 rounded-full bg-gradient-to-br from-cyan-300 via-blue-500 to-violet-600 shadow-[0_0_100px_rgba(34,211,238,0.3)]" />
-          <div className="absolute inset-[34%] z-20 flex flex-col items-center justify-center rounded-full bg-[#06060a] px-2 text-center shadow-[0_0_28px_rgba(0,0,0,0.8)]">
-            <strong className="whitespace-nowrap font-display text-lg text-white sm:text-xl">AI × SWE</strong>
-            <span className="mt-2 whitespace-nowrap rounded-full bg-black px-2 py-1 text-[8px] uppercase tracking-[0.16em] text-cyan-100">
-              BUILD / AUTOMATE
-            </span>
+          <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="relative">
+            <p className="text-2xl font-medium leading-snug text-white">
+              Turning operational bottlenecks into software that works.
+            </p>
+            <p className="mt-3 text-sm leading-6 text-slate-400">
+              Agentic infrastructure troubleshooting, healthcare automation, computer vision, and
+              student-facing APIs.
+            </p>
+            <div className="mt-8 grid grid-cols-3 gap-3">
+              {[
+                ["−50%", "MTTR"],
+                ["10K+", "records"],
+                ["95%", "CV accuracy"],
+              ].map(([value, label]) => (
+                <div key={label} className="rounded-2xl border border-white/8 bg-white/[0.035] p-3">
+                  <strong className="font-display text-lg text-white">{value}</strong>
+                  <p className="mt-1 text-[10px] uppercase tracking-wider text-slate-500">{label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-7 flex items-end justify-between border-t border-white/10 pt-5">
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-slate-600">Base</p>
+                <p className="mt-1 text-sm text-slate-300">Allen, Texas</p>
+              </div>
+              <div className="text-right">
+                <p className="text-xs uppercase tracking-[0.18em] text-slate-600">UT Dallas</p>
+                <p className="mt-1 text-sm text-slate-300">CS · May 2028</p>
+              </div>
+            </div>
           </div>
-          {[`${PROFILE.gpa} GPA`, "K8s", "CV", "APIs"].map((label, index) => (
-            <span
-              key={label}
-              className="absolute z-30 rounded-full border border-white/15 bg-black/85 px-3 py-1 font-display text-[10px] tracking-wider text-white shadow-lg"
-              style={{
-                left: `${12 + (index % 2) * 68}%`,
-                top: `${18 + index * 20}%`,
-              }}
-            >
-              {label}
-            </span>
-          ))}
-        </motion.div>
+        </motion.aside>
       </section>
 
       <div className="traditional-marquee" aria-hidden="true">
@@ -270,7 +281,7 @@ export default function TraditionalPortfolio() {
         <div className="mt-8 flex justify-center gap-5 text-sm text-slate-500">
           <a href={PROFILE.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <a href={PROFILE.github} target="_blank" rel="noreferrer">GitHub</a>
-          <Link href="/">Galaxy mode</Link>
+          <Link href="/galaxy#from-classic">Galaxy mode</Link>
         </div>
       </footer>
     </main>
